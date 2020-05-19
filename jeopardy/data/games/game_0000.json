@@ -1,0 +1,603 @@
+﻿{
+  "jeopardy": {
+    "categories": [ "Presidents", "US States", "Bodies of water", "Cities of Europe", "Cities of South America", "Sesame St. colors" ],
+    "clues": [
+      {
+        "categoryIndex": 0,
+        "answerKey": [
+          {
+            "level": 1,
+            "clue": {
+              "text": "Our first president",
+              "answer": [
+                "George Washington"
+              ]
+            }
+          },
+          {
+            "level": 2,
+            "clue": {
+              "text": "One of the presidents whose initials are \"J.M.\"",
+              "answer": [
+                "James Madison",
+                "John Monroe"
+              ]
+            }
+          },
+          {
+            "level": 3,
+            "clue": {
+              "text": "two sets of fathers and sons have been president.  Name any one of them",
+              "answer": [
+                "John Adams",
+                "John Quincy Adams",
+                "George Bush",
+                "George W. Bush"
+              ]
+            }
+          },
+          {
+            "level": 4,
+            "clue": {
+              "text": "Oldest ever elected",
+              "answer": "Donald Trump"
+            }
+          },
+          {
+            "level": 5,
+            "clue": {
+              "text": "Only president born in New Jersey",
+              "answer": "Grover Cleveland"
+            }
+          },
+          {
+            "level": 6,
+            "clue": {
+              "text": "Only president born in Kentucky",
+              "answer": "Abraham Lincoln"
+            }
+          }
+        ]
+      },
+      {
+        "categoryIndex": 1,
+        "answerKey": [
+          {
+            "level": 1,
+            "clue": {
+              "text": "Last state alphabetically",
+              "answer": [ "Wyoming" ]
+            }
+          },
+          {
+            "level": 2,
+            "clue": {
+              "text": "State with the lowest population",
+              "answer": [ "Wyoming" ]
+            }
+          },
+          {
+            "level": 3,
+            "clue": {
+              "text": "1 of the 4 states that begin with the letter 'I'",
+              "answer": [ "Indiana", "Iowa", "Illinois", "Idaho" ]
+            }
+          },
+          {
+            "level": 4,
+            "clue": {
+              "text": "A state that borders the Mississippi river.",
+              "answer": [ "Louisiana", "Arkansas", "Mississippi", "Tennessee", "Missouri", "Illonois" ]
+            }
+          },
+          {
+            "level": 5,
+            "clue": {
+              "text": "Largest state by Area",
+              "answer": [ "Alaska" ]
+            }
+          },
+          {
+            "level": 6,
+            "clue": {
+              "text": "Name one of the 15 states where the abbreviation is the first and last letter of the state name",
+              "answer": [
+                "California",
+                "Pennsylvania",
+                "Georgia",
+                "Virginia",
+                "Maryland",
+                "Colorado",
+                "Kentucky",
+                "Louisiana",
+                "Connecticut",
+                "Iowa",
+                "Kansas",
+                "Hawaii",
+                "Maine",
+                "Delaware",
+                "Vermont"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "categoryIndex": 2,
+        "answerKey": [
+          {
+            "level": 1,
+            "clue": {
+              "text": "Largest lake in the United States, 2nd largest in the world",
+              "answer": [ "Lake Superior" ]
+            }
+          },
+          {
+            "level": 2,
+            "clue": {
+              "text": "Largest lake in the world",
+              "answer": [ "Caspian Sea" ]
+            }
+          },
+          {
+            "level": 3,
+            "clue": {
+              "text": "Longest River",
+              "answer": [ "Nile" ]
+            }
+          },
+          {
+            "level": 4,
+            "clue": {
+              "text": "name of the waterway between Morocco and Spain",
+              "answer": [ "Strait of Gibraltar" ]
+            }
+          },
+          {
+            "level": 5,
+            "clue": {
+              "text": "man made passage that connects the Meriditerranean Sea to the Red Sea",
+              "answer": [ "Suez Canal" ]
+            }
+          },
+          {
+            "level": 6,
+            "clue": {
+              "text": "name of the sea that is south of China",
+              "answer": [ "South China Sea" ]
+            }
+          }
+        ]
+      },
+      {
+        "categoryIndex": 3,
+        "answerKey": [
+          {
+            "level": 1,
+            "clue": {
+              "text": "Vienna",
+              "answer": [ "Austria" ]
+            }
+          },
+          {
+            "level": 2,
+            "clue": {
+              "text": "Rome",
+              "answer": [ "Italy" ]
+            }
+          },
+          {
+            "level": 3,
+            "clue": {
+              "text": "Sarajevo",
+              "answer": [ "Bosnia", "Herzegovina" ]
+            }
+          },
+          {
+            "level": 4,
+            "clue": {
+              "text": "Seville",
+              "answer": [ "Spain" ]
+            }
+          },
+          {
+            "level": 5,
+            "clue": {
+              "text": "Cologne, 2 of the 3",
+              "answer": [ "Germany", "France", "Italy" ],
+              "required_responses": 2
+            }
+          },
+          {
+            "level": 6,
+            "clue": {
+              "text": "Antwerp",
+              "answer": [ "Brussels" ]
+            }
+          }
+        ]
+      },
+      {
+        "categoryIndex": 4,
+        "answerKey": [
+          {
+            "level": 1,
+            "clue": {
+              "text": "Lima",
+              "answer": [ "Peru" ]
+            }
+          },
+          {
+            "level": 2,
+            "clue": {
+              "text": "Sao Paulo",
+              "answer": [ "Brazil" ]
+            }
+          },
+          {
+            "level": 3,
+            "clue": {
+              "text": "Caracas",
+              "answer": [ "Venezuela" ]
+            }
+          },
+          {
+            "level": 4,
+            "clue": {
+              "text": "Bogota",
+              "answer": [ "Colombia" ]
+            }
+          },
+          {
+            "level": 5,
+            "clue": {
+              "text": "Santiago",
+              "answer": [ "Chile" ]
+            }
+          },
+          {
+            "level": 6,
+            "clue": {
+              "text": "Guayaquil",
+              "answer": [ "Ecuador" ]
+            }
+          }
+        ]
+      },
+      {
+        "categoryIndex": 5,
+        "answerKey": [
+          {
+            "level": 1,
+            "clue": {
+              "text": "yellow",
+              "answer": [ "Big Bird" ]
+            }
+          },
+          {
+            "level": 2,
+            "clue": {
+              "text": "blue",
+              "answer": [ "Grover", "Cookie Monster" ]
+            }
+          },
+          {
+            "level": 3,
+            "clue": {
+              "text": "green",
+              "answer": [ "Oscar", "Oscar the Grouch" ]
+            }
+          },
+          {
+            "level": 4,
+            "clue": {
+              "text": "red",
+              "answer": [ "Elmo" ]
+            }
+          },
+          {
+            "level": 5,
+            "clue": {
+              "text": "purple",
+              "answer": [ "The Count", "Count" ]
+            }
+          },
+          {
+            "level": 6,
+            "clue": {
+              "text": "Orange and Yellow (2 puppets)",
+              "answer": [ "Ernie", "Bert", "Ernie and Bert", "Ernie & Bert", "Bert & Ernie", "Bert and Ernie" ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "double_jeopardy": {
+    "categories": [ "", "", "", "", "", "" ],
+    "clues": [
+      {
+        "categoryIndex": 0,
+        "answerKey": [
+          {
+            "level": 1,
+            "clue": {
+              "text": "",
+              "answer": [ "" ]
+            }
+          },
+          {
+            "level": 2,
+            "clue": {
+              "text": "",
+              "answer": [ "" ]
+            }
+          },
+          {
+            "level": 3,
+            "clue": {
+              "text": "",
+              "answer": [ "" ]
+            }
+          },
+          {
+            "level": 4,
+            "clue": {
+              "text": "",
+              "answer": [ "" ]
+            }
+          },
+          {
+            "level": 5,
+            "clue": {
+              "text": "",
+              "answer": [ "" ]
+            }
+          },
+          {
+            "level": 6,
+            "clue": {
+              "text": "",
+              "answer": [ "" ]
+            }
+          }
+        ]
+      },
+      {
+        "categoryIndex": 1,
+        "answerKey": [
+          {
+            "level": 1,
+            "clue": {
+              "text": "",
+              "answer": [ "" ]
+            }
+          },
+          {
+            "level": 2,
+            "clue": {
+              "text": "",
+              "answer": [ "" ]
+            }
+          },
+          {
+            "level": 3,
+            "clue": {
+              "text": "",
+              "answer": [ "" ]
+            }
+          },
+          {
+            "level": 4,
+            "clue": {
+              "text": "",
+              "answer": [ "" ]
+            }
+          },
+          {
+            "level": 5,
+            "clue": {
+              "text": "",
+              "answer": [ "" ]
+            }
+          },
+          {
+            "level": 6,
+            "clue": {
+              "text": "",
+              "answer": [ "" ]
+            }
+          }
+        ]
+      },
+      {
+        "categoryIndex": 2,
+        "answerKey": [
+          {
+            "level": 1,
+            "clue": {
+              "text": "",
+              "answer": [ "" ]
+            }
+          },
+          {
+            "level": 2,
+            "clue": {
+              "text": "",
+              "answer": [ "" ]
+            }
+          },
+          {
+            "level": 3,
+            "clue": {
+              "text": "",
+              "answer": [ "" ]
+            }
+          },
+          {
+            "level": 4,
+            "clue": {
+              "text": "",
+              "answer": [ "" ]
+            }
+          },
+          {
+            "level": 5,
+            "clue": {
+              "text": "",
+              "answer": [ "" ]
+            }
+          },
+          {
+            "level": 6,
+            "clue": {
+              "text": "",
+              "answer": [ "" ]
+            }
+          }
+        ]
+      },
+      {
+        "categoryIndex": 3,
+        "answerKey": [
+          {
+            "level": 1,
+            "clue": {
+              "text": "",
+              "answer": [ "" ]
+            }
+          },
+          {
+            "level": 2,
+            "clue": {
+              "text": "",
+              "answer": [ "" ]
+            }
+          },
+          {
+            "level": 3,
+            "clue": {
+              "text": "",
+              "answer": [ "" ]
+            }
+          },
+          {
+            "level": 4,
+            "clue": {
+              "text": "",
+              "answer": [ "" ]
+            }
+          },
+          {
+            "level": 5,
+            "clue": {
+              "text": "",
+              "answer": [ "" ]
+            }
+          },
+          {
+            "level": 6,
+            "clue": {
+              "text": "",
+              "answer": [ "" ]
+            }
+          }
+        ]
+      },
+      {
+        "categoryIndex": 4,
+        "answerKey": [
+          {
+            "level": 1,
+            "clue": {
+              "text": "",
+              "answer": [ "" ]
+            }
+          },
+          {
+            "level": 2,
+            "clue": {
+              "text": "",
+              "answer": [ "" ]
+            }
+          },
+          {
+            "level": 3,
+            "clue": {
+              "text": "",
+              "answer": [ "" ]
+            }
+          },
+          {
+            "level": 4,
+            "clue": {
+              "text": "",
+              "answer": [ "" ]
+            }
+          },
+          {
+            "level": 5,
+            "clue": {
+              "text": "",
+              "answer": [ "" ]
+            }
+          },
+          {
+            "level": 6,
+            "clue": {
+              "text": "",
+              "answer": [ "" ]
+            }
+          }
+        ]
+      },
+      {
+        "categoryIndex": 5,
+        "answerKey": [
+          {
+            "level": 1,
+            "clue": {
+              "text": "",
+              "answer": [ "" ]
+            }
+          },
+          {
+            "level": 2,
+            "clue": {
+              "text": "",
+              "answer": [ "" ]
+            }
+          },
+          {
+            "level": 3,
+            "clue": {
+              "text": "",
+              "answer": [ "" ]
+            }
+          },
+          {
+            "level": 4,
+            "clue": {
+              "text": "",
+              "answer": [ "" ]
+            }
+          },
+          {
+            "level": 5,
+            "clue": {
+              "text": "",
+              "answer": [ "" ]
+            }
+          },
+          {
+            "level": 6,
+            "clue": {
+              "text": "",
+              "answer": [ "" ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

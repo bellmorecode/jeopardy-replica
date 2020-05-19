@@ -1,0 +1,195 @@
+/* ** mobile first.  this is designed for a tablet 7+ inch tablet in landscape mode. */
+@font-face {
+    font-family: 'Jeopardy';
+    src: url('gyparody hv.ttf') format('truetype');
+}
+
+.clearfix { clear: both; }
+
+body {
+    font-family: sans-serif;
+    background-color: lightblue;
+}
+/* Title */
+.header {
+    text-align: center;
+    margin-left: 5px; 
+    margin-right: 5px;
+    width: 100%;
+}
+.header .jeopardy_title {
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: "Jeopardy";
+    font-size: 36pt;
+    margin-bottom: 5px;
+}
+/* Category Titles */
+.board div {
+    display: inline-block;
+}
+.board .category_titles {
+    width: 90%;
+    display: block;
+    margin-left: 5%;
+    margin-right: 5%;
+    vertical-align: middle;
+}
+.board .category_titles .title {
+    text-align: center;
+    width: 15%;
+    font-weight: bold;
+    word-wrap: normal;
+    color: white;
+    padding-left: 5px;    
+    padding-right: 5px;    
+    font-size: 12px;
+    text-transform: uppercase;
+    height: 45px;
+    background-color: rgb(26,67,157);
+}
+.board .category_titles .title .content {
+    margin-top: 7%;
+}
+
+/* Clues */
+.clues {
+    display: block;
+    width: 100%;
+}
+.clues .level {
+    width: 90%;
+    display: block;
+    margin: 5px 5% 0 5%;
+}
+.clues .level .clue { 
+    color: goldenrod;
+    font-size: 30pt;
+    width: 15%;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+    height: 90px;
+    background-color: rgb(26,67,157);
+    cursor: pointer;
+}
+
+    .clues .level .clue.used {
+        color: lightgray;
+        background-color: darkgray;
+    }
+
+.clues .level .clue:hover {
+  -webkit-box-shadow: inset 0 0 30px white;
+  -moz-box-shadow: inset 0 0 30px white;
+  box-shadow: inset 0 0 30px white;
+  color: white;
+}
+
+.clues .level .clue .content {
+    display: block;
+    height: 100%;
+    padding-top: 17%;
+}
+
+    .clues .level .clue.used .content:hover {
+        color: #222;
+    }
+
+.players_area {
+    width: 90%;
+    display: block;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5px;
+}
+    .players_area .player {
+        display: inline-block;
+        width: 33.33%;
+        text-align: center;
+        color: white;
+        font-size: 16pt;
+        background-color: rgb(26,67,157);
+    }
+
+.clue-popup {
+    background-color: lightblue;
+    position: fixed;
+    top: 20%;
+    width: 57%;
+    height: 51%;
+    left: 20%;
+    border-radius: 30px;
+    border: solid 4px rgba(26,67,157, 0.61);display: none;
+}
+
+.clue-popup .close-button {
+    cursor: pointer;
+    font-size: 57px;
+    float: right;
+    margin-right: 30px; margin-top: 15px;
+}
+
+.clue-popup .clue-mask {
+    text-align: center; align-content: center;
+}
+
+    .clue-popup .clue-mask .clue-title {
+        font-weight: bold; color: dodgerblue;
+        font-size: 24pt;
+        margin-bottom: 10px;
+    }
+
+    .clue-popup .clue-mask .clue-amount {
+        font-weight: bold; color: darkgoldenrod;
+        font-size: 32pt;
+    }
+
+    .clue-popup .clue-mask .clue-text {
+        color: black; font-size: 18pt;
+        margin-bottom: 20px;
+    }
+
+    .clue-popup .clue-mask .clue-hint {
+        color: black; margin-bottom: 10px;
+    }
+
+    .clue-popup .clue-response button {
+        font-size: 16pt;
+        font-family: 'Jeopardy';
+        border: 0; background-color: darkblue; color: white;
+    }
+
+    .clue-popup .clue-mask .clue-response .clue-response-text {
+        color: black;
+        font-size: 18pt;
+        padding: 16px;
+        font-family: sans-serif;
+        text-align: center;
+
+    }
+
+    .clue-popup .clue-mask .clue-answer {
+        color: darkolivegreen; display: none;
+        font-weight: 600; font-size: 16pt; margin: 10px;
+    }
+
+    @media only screen and (min-width : 1025px) {
+        .clues .level .clue {
+            height: 120px;
+            font-size: 36pt;
+        }
+            .clues .level .clue .content {
+                padding-top: 12%;
+            }
+        .clues .level .clue:hover {
+            -webkit-box-shadow: inset 0 0 30px white;
+            -moz-box-shadow: inset 0 0 30px white;
+            box-shadow: inset 0 0 30px white;
+            color: white;
+        }
+        .players_area .player {
+            width: 31.35%;
+        }
+}

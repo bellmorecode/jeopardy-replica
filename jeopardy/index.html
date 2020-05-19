@@ -1,0 +1,228 @@
+<html>
+<head>
+    <title>Jeopardy Replica</title>
+    <link href="content/site.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="app_container">
+        <div class="app_stage">
+
+            <div class="header">
+                <h1 class="jeopardy_title">
+                    jeopardy!
+                </h1>
+            </div>
+
+            <!--<div class="game-selector-controlpanel">
+                <label>Select a game </label>
+                <select name="game-selector" id="game-selector">
+                    <option value="game1">Game 1</option>
+                </select>
+            </div>-->
+
+            <div class="board">
+                <div class="category_titles">
+                    <div class="title title_1">
+                        <div class="content">
+                            Some Title
+                        </div>
+                    </div>
+                    <div class="title title_2">
+                        <div class="content">
+                            Some Title
+                        </div>
+                    </div>
+                    <div class="title title_3">
+                        <div class="content">
+                            Some Title
+                        </div>
+                    </div>
+                    <div class="title title_4">
+                        <div class="content">
+                            Some Title
+                        </div>
+                    </div>
+                    <div class="title title_5">
+                        <div class="content">
+                            Some Title
+                        </div>
+                    </div>
+                    <div class="title title_6">
+                        <div class="content">
+                            Some Title
+                        </div>
+                    </div>
+                </div>
+                <div class="clues">
+                    <div class="level level_1">
+                        <div class="level_1_1 clue">
+                            <div class="content">$200</div>
+                        </div>
+                        <div class="level_1_2 clue">
+                            <div class="content">$200</div>
+                        </div>
+                        <div class="level_1_3 clue">
+                            <div class="content">$200</div>
+                        </div>
+                        <div class="level_1_4 clue">
+                            <div class="content">$200</div>
+                        </div>
+                        <div class="level_1_5 clue">
+                            <div class="content">$200</div>
+                        </div>
+                        <div class="level_1_6 clue">
+                            <div class="content">$200</div>
+                        </div>
+                    </div>
+                    <div class="level level_2">
+                        <div class="level_2_1 clue">
+                            <div class="content">$400</div>
+                        </div>
+                        <div class="level_2_2 clue">
+                            <div class="content">$400</div>
+                        </div>
+                        <div class="level_2_3 clue">
+                            <div class="content">$400</div>
+                        </div>
+                        <div class="level_2_4 clue">
+                            <div class="content">$400</div>
+                        </div>
+                        <div class="level_2_5 clue">
+                            <div class="content">$400</div>
+                        </div>
+                        <div class="level_2_6 clue">
+                            <div class="content">$400</div>
+                        </div>
+                    </div>
+                    <div class="level level_3">
+                        <div class="level_3_1 clue">
+                            <div class="content">$600</div>
+                        </div>
+                        <div class="level_3_2 clue">
+                            <div class="content">$600</div>
+                        </div>
+                        <div class="level_3_3 clue">
+                            <div class="content">$600</div>
+                        </div>
+                        <div class="level_3_4 clue">
+                            <div class="content">$600</div>
+                        </div>
+                        <div class="level_3_5 clue">
+                            <div class="content">$600</div>
+                        </div>
+                        <div class="level_3_6 clue">
+                            <div class="content">$600</div>
+                        </div>
+                    </div>
+                    <div class="level level_4">
+                        <div class="level_4_1 clue">
+                            <div class="content">$800</div>
+                        </div>
+                        <div class="level_4_2 clue">
+                            <div class="content">$800</div>
+                        </div>
+                        <div class="level_4_3 clue">
+                            <div class="content">$800</div>
+                        </div>
+                        <div class="level_4_4 clue">
+                            <div class="content">$800</div>
+                        </div>
+                        <div class="level_4_5 clue">
+                            <div class="content">$800</div>
+                        </div>
+                        <div class="level_4_6 clue">
+                            <div class="content">$800</div>
+                        </div>
+                    </div>
+                    <div class="level level_5">
+                        <div class="level_5_1 clue">
+                            <div class="content">$1000</div>
+                        </div>
+                        <div class="level_5_2 clue">
+                            <div class="content">$1000</div>
+                        </div>
+                        <div class="level_5_3 clue">
+                            <div class="content">$1000</div>
+                        </div>
+                        <div class="level_5_4 clue">
+                            <div class="content">$1000</div>
+                        </div>
+                        <div class="level_5_5 clue">
+                            <div class="content">$1000</div>
+                        </div>
+                        <div class="level_5_6 clue">
+                            <div class="content">$1000</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clue-popup">
+                <div class="close-button">&times;</div>
+                <div class="clearfix">&nbsp;</div>
+                <div class="clue-mask">
+                    <div class="clue-title">
+                        Clue Title
+                    </div>
+
+                    <div class="clue-hint">
+                        
+                    </div>
+
+                    <div class="clue-amount">
+                        $800
+                    </div>
+
+                    <div class="clue-text">
+                        lorem ipsum
+                    </div>
+
+                    <div class="clue-response">
+                        <textarea class="clue-response-text"></textarea>
+                        <hr width="61%" />
+                        <div class="clue-answer">
+                        </div>
+                        <button class="btn btn-lg">
+                            Submit Answer
+                        </button>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="players_area">
+            <div class="player">
+                <div class="player_score">$0</div>
+                <div class="player_name">Player 1</div>
+            </div>
+            <div class="player">
+                <div class="player_score">$0</div>
+                <div class="player_name">
+                    Player 2
+                </div>
+            </div>
+            <div class="player">
+                <div class="player_score">$0</div>
+                <div class="player_name">
+                    Player 3
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <script type="text/javascript" src="scripts/app/game.js"></script>
+    <script type="text/javascript" src="scripts/app/alex.js"></script>
+    <script type="text/javascript" src="scripts/app/board.js"></script>
+    <script type="text/javascript" >
+
+        $(document).ready(function () {
+            GameController.LoadRound1();
+        });
+
+    </script>
+</body>
+</html>
