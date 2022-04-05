@@ -321,70 +321,72 @@ var __gamedata = {
         ]
     },
     "double_jeopardy": {
-        "categories": ["", "", "", "", "", ""],
+        "categories": ["Bravo Abbrev", "", "", "", "", ""],
         "clues": [
             {
                 "categoryIndex": 0,
+                "categoryHint": "We give you the initials for the show, you give us the title.",
                 "answerKey": [
                     {
                         "level": 1,
                         "clue": {
-                            "text": "",
-                            "answer": [""]
+                            "text": "RHONY",
+                            "answer": ["The Real Housewives of New York"]
                         }
                     },
                     {
                         "level": 2,
                         "clue": {
-                            "text": "",
-                            "answer": [""]
+                            "text": "WWHL",
+                            "answer": ["Watch what happens LIVE!"]
                         }
                     },
                     {
                         "level": 3,
                         "clue": {
-                            "text": "",
-                            "answer": [""]
+                            "text": "MDLLA",
+                            "answer": ["Million Dollar Listing Los Angeles"]
                         }
                     },
                     {
                         "level": 4,
                         "clue": {
-                            "text": "",
-                            "answer": [""]
+                            "text": "VR",
+                            "answer": ["Vanderpump Rules"]
                         }
                     },
                     {
                         "level": 5,
                         "clue": {
-                            "text": "",
-                            "answer": [""]
+                            "text": "SOS",
+                            "answer": ["Shahs of Sunset"]
                         }
                     },
                     {
                         "level": 6,
                         "clue": {
-                            "text": "",
-                            "answer": [""]
+                            "text": "LCK",
+                            "answer": ["Last Chance Kitchen"]
                         }
                     }
                 ]
             },
             {
                 "categoryIndex": 1,
+                "categoryHint": "Planets",
                 "answerKey": [
                     {
                         "level": 1,
                         "clue": {
-                            "text": "",
-                            "answer": [""]
+                            "text": "where we live",
+                            "answer": ["Earth"]
                         }
                     },
                     {
                         "level": 2,
                         "clue": {
-                            "text": "",
-                            "answer": [""]
+                            "text": "Closest planet to the Sun",
+                            "answer": ["Mercury"]
                         }
                     },
                     {
@@ -608,64 +610,82 @@ var __gamedata = {
         ]
     }
 };
-
 var GameController = {
     current_round: __gamedata.jeopardy,
-    LoadRound1: function () {
-        // category titles
-        for (var q = 0; q < GameController.current_round.categories.length; q++) {
-            var title_index = q + 1;
-            var element_selector = ".title.title_" + title_index.toString();
-            var cat_title = GameController.current_round.categories[q];
-            $(element_selector).html(cat_title);
-        }
+    cluesRemaining: 30,
+    setupEventHandlers : function () {
         // handler to close clue pop-up
         $(".clue-popup .close-button").on("click", function () {
             window.clearTimeout(GameController.__timeoutId);
             $(".clue-popup").hide();
         });
+
         // load clue on click.
         $(".clue").on("click", function () {
             var className = $(this).prop("class").toString();
-            if (className.indexOf("used") > -1) return; // no re-try on clues.
+            if (className.indexOf("used") > -1) return; // no clue replay
             var clue_target = className.replace(" clue", "");
             var indicies = clue_target.replace("level_", "");
             var parts = indicies.split('_');
             var level_id = parts[0];
             var cat_index = parseInt(parts[1]) - 1;
 
-            for (var x = 0; GameController.current_round.clues.length; x++) {
-                var cat_data = GameController.current_round.clues[x];
-                if (cat_data.categoryIndex == cat_index) {
-                    // find clue in category_dataset
-                    for (var y = 0; y < cat_data.answerKey.length; y++) {
-                        var clue_data = cat_data.answerKey[y];
-                        if (clue_data.level == level_id) {
-                            clue_data.clue["category"] = GameController.current_round.categories[cat_index];
-                            clue_data.clue["hint"] = cat_data.categoryHint;
-                            GameController.ShowClue(className, clue_data.clue);
-                            return;
-                        }
-                    }
-                }
-            }
+//            var clue_data = GameController.current_round.clues.filter((cat) => cat.categoryIndex == cat_index)[0].answerKey.filter((clue) => clue.level === level_id)[0];
+  //          clue_data.clue["category"] = GameController.current_round.categories[cat_index];
+    //        clue_data.clue["hint"] = cat_data.categoryHint;
+      //      GameController.ShowClue(className, clue_data.clue);
+
+            // TODO: improve this to remove for loops
+             for (var x = 0; GameController.current_round.clues.length; x++) {
+                 var cat_data = GameController.current_round.clues[x];
+                 if (cat_data.categoryIndex == cat_index) {
+                     // find clue in category_dataset
+                     for (var y = 0; y < cat_data.answerKey.length; y++) {
+                         var clue_data = cat_data.answerKey[y];
+                         if (clue_data.level == level_id) {
+                             clue_data.clue["category"] = GameController.current_round.categories[cat_index];
+                             clue_data.clue["hint"] = cat_data.categoryHint;
+                             GameController.ShowClue(className, clue_data.clue);
+                             return;
+                         }
+                     }
+                 }
+             }
         });
 
         // submit answer click
         $(".clue-popup .clue-response button").on("click", function () {
-
             $(this).prop("disabled", true);
             $(".clue-popup .clue-response button").css("background-color", "darkgray");
             $(".clue-answer").show();
-
             if ($(".clue-popup .clue-mask .clue-answer").text() == $(".clue-popup .clue-mask .clue-response-text").val()) {
                 $(".clue-popup .clue-mask .clue-response-text").css("background-color", "green");              
             }
-
             $(GameController.lastCellSelected).addClass("used");
-
             GameController.__timeoutId = window.setTimeout(function () { $(".clue-popup").hide(); }, 7000);
         });
+    },
+    loadRound: function (round_num) {
+        // category titles
+        GameController.cluesRemaining = 30; // reset to 30 left. 5 x 6 
+
+        if (round_num === 2) {
+            GameController.current_round = __gamedata.double_jeopardy;
+        }
+
+        // show category titles
+        for (var q = 0; q < GameController.current_round.categories.length; q++) {
+            var title_index = q + 1;
+            var element_selector = ".title.title_" + title_index.toString();
+            var cat_title = GameController.current_round.categories[q];
+            $(element_selector).html(cat_title);
+        }
+
+        // TODO: remove 'used' flag from all clues. 
+
+        if (round_num === 1) {
+            GameController.setupEventHandlers();
+        }
     },
     __timeoutId : 0,
     ShowClue: function (el, data) {
@@ -693,6 +713,4 @@ var GameController = {
         $(".clue-popup").show();
     }, 
     lastCellSelected : ""
-
-
 };

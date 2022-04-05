@@ -34,7 +34,7 @@ body {
     display: block;
     margin-left: 5%;
     margin-right: 5%;
-    vertical-align: middle;
+    margin-top: 5px;
 }
 .board .category_titles .title {
     text-align: center;
@@ -43,24 +43,20 @@ body {
     word-wrap: normal;
     color: white;
     padding-left: 5px;    
-    padding-right: 5px;    
-    font-size: 12px;
+    padding-right: 5px;  
+    padding-top: 20px; 
+    font-size: 1rem;
     text-transform: uppercase;
     height: 45px;
     background-color: rgb(26,67,157);
 }
-.board .category_titles .title .content {
-    margin-top: 7%;
-}
 
 /* Clues */
 .clues {
-    display: block;
     width: 100%;
 }
 .clues .level {
     width: 90%;
-    display: block;
     margin: 5px 5% 0 5%;
 }
 .clues .level .clue { 
